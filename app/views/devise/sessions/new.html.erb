@@ -1,20 +1,58 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<section class="login-div">
+  <div class="left-login-part">
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+  <div class="right-login-part">
+    <div class="login-container">
+      <h2 class="login-phrase">Sign in to Dribbble</h2>
 
-<%= render "devise/shared/links" %>
+      <div class="google-login-dev">
+        <img class="google-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACFElEQVR4nGNgoCf4X6/F9qbEJPhtvmHDmyKD+nflxv7/6xlYSDboY6mB6utEo5PPnE3+PrU0/Y+Mn7mY/H2dYnTsQ7WxMlGGfagySnvmZoxhEAZ2Mfn7rtAgC79hJfrZz2xN8BsEc6mzyd9PpcYBOA17X6+v8NzD+A+yppdhxi/f5hoWvU0wkf1crCf2vtSw8FW48QuQYaDwxOu6H6v0pryONoYb9jrFaDcutZ/qjTXwGvb/PwPTrwO6z3/v1/3/qdUA7DIGSsDPA7q6vw/o/ofjrXpO6Gr8qmc/xoV9quY+qO2stYUr/n1A1xPZwP/7tXjQDRRNPfAfHy7tbqxBGLhfz4NSA0u6mqoRXt6vpwMz7NcB3f/n95hhJAd0b9qULvuCbGBNT1MAaqTs1332cb/+/9Ytrv9zN3m+IRTuLmUL38EMU83a+jd01SpmFAUXd5vPSNno/d9nfQAYN2113YfLsISm/sPIrotqmHwCQ9HcLc5KkRt8/8IMBOGCzZ6vJm13LO3e4ig/Z7u7+pQtjjX5mzzexU8t/S+Ztg/iuuytf6u7mrHn6ynbHfKCNvjBDcSHE+an/VfP2fyvqKs5F2/YTNnikBeF5lJsOHqDz9+p673wFw4wsGCbo3LzFtfjkRt8MAyO2uDzt3Wry9FZG10ViTIMGcw8Y8w6c6tTwKQtTvWTtznUzd5p51v/n4GJZIMoAQCvXrzatsacUQAAAABJRU5ErkJggg==">
+        <%= link_to "Sign in with google", new_user_session_path, class: "google-sign-in-btn"%>
+      </div>
+
+      <div class="separator-phrase-div">
+        <hr class="line-separator">
+        <p class="separator-phrase"> or sign in with email </p>
+        <hr class="line-separator">
+      </div>
+
+      <div class="login-form-div">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+
+            <div class="email-div">
+              <label class="form-label">Username or Email</label>
+              <div class="email-input">
+                <%= f.email_field :email,
+                                  required: false,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "email" },
+                                  class: "input-field" %>
+              </div>
+              </div>
+
+            <div class="password-div">
+              <label class="form-label">Password</label>
+              <div class="password-input">
+                <%= f.password_field :password,
+                                     required: false,
+                                     label: false,
+                                     input_html: { autocomplete: "current-password" },
+                                     class: "input-field"%>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign In", class: "sign-in-btn"%>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+
+    </div>
+  </div>
+</section>

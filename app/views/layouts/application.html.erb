@@ -12,22 +12,25 @@
   </head>
 
   <body>
-  <% if flash[:notice] %>
-    <div class="notification">
-      <p class="notice"><%= notice %></p>
-    </div>
-  <% end %>
-  <% if flash[:alert] %>
-    <div class="notification">
-      <p class="alert"><%= alert %></p>
-    </div>
-  <% end %>
+
+  <%# if !(current_page?(new_user_registration_path) or current_page?( new_user_session_path)) %>
+    <%#= render 'layouts/navbar' %>
+  <%# end %>
 
   <%= render 'layouts/navbar' %>
 
-  <% if !user_signed_in? %>
-    <%= render 'layouts/intro_part' %>
-  <% end %>
+  <center>
+    <% if flash[:notice] %>
+      <div class="notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+  </center>
 
   <section class="body-content-section">
     <center>

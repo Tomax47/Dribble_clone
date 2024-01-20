@@ -194,3 +194,159 @@ body {
     transition-duration: 0.6s;
     background-color: #4b4b52;
 }
+
+/* DEVISE */
+
+/*LOGIN PAGE*/
+
+.login-div {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f7f4;
+}
+
+.left-login-part {
+    background: url("https://4kwallpapers.com/images/walls/thumbs_v/1386.jpg");
+    width: 30%;
+    height: 60em;
+    background-size: contain;
+    border-radius: 2em;
+}
+
+.right-login-part {
+    width: 79%;
+    height: 100%;
+    background-color: #f8f7f4;
+    padding: 10em 0 10em 0;
+}
+
+.login-container {
+    margin: 10em 0 0 -50em;
+    display: inline;
+    justify-content: flex-start;
+}
+.login-phrase {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0d0c22;
+    font-family: 'Mona-Sans', sans-serif;
+    margin-bottom: 2em;
+}
+
+.google-login-dev {
+    border-color: #BBBBBB;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 3em;
+    padding: 20px;
+    background-color: #f8f7f4;
+    width: 20em;
+    height: 1em;
+    margin-bottom: 2em;
+    transition: border-color;
+}
+
+.google-login-dev:hover {
+    transition-duration: 0.6s;
+    cursor: pointer;
+    border-color: #f8b2ee;
+}
+
+.google-sign-in-btn {
+    text-decoration: none;
+    color: #0d0c22;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-left: 10px;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.line-separator {
+    display: inline-block;
+    width: 10em;
+    height: 1px;
+    border: none;
+    color: #BBBBBB;
+    background-color: #BBBBBB;
+}
+
+.separator-phrase {
+    color: #BBBBBB;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.form-inputs {
+    padding: 20px;
+    margin: 1em 0 1em 0;
+}
+
+.form-actions {
+    margin-bottom: 1em;
+}
+
+.form-label {
+    color: #0d0c22;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.input-field {
+    padding: 10px;
+    margin: 20px 0 20px 0;
+    border-color: #BBBBBB;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 1em;
+    background-color: #f8f7f4;
+    width: 30em;
+    height: 3em;
+}
+
+.input-field:focus {
+    outline: #f8b2ee;
+    border-color: rgba(224, 131, 255, 0.93);
+}
+
+.sign-in-btn {
+    padding: 20px 0 30px 0;
+    border-radius: 3em;
+    background-color: #0d0c22;
+    width: 23em;
+    height: 2em;
+    color: #f8f7f4;
+    font-weight: bold;
+    font-size: 0.9em;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: background-color;
+}
+
+.sign-in-btn:hover {
+    transition-duration: 0.6s;
+    background-color: #f8b2ee;
+    cursor: pointer;
+}
+
+/* SHARED LINKS */
+.shared-links-phrase {
+    font-size: 0.9em;
+    color: #0d0c22;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.shared-links-action {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    color: #0d0c22;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: color;
+}
+
+.shared-links-action:hover {
+    transition-duration: 0.6s;
+    color: #BBBBBB;
+}
