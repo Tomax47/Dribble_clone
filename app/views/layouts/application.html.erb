@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DribbleClone</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DribbbleClone</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -22,7 +23,17 @@
     </div>
   <% end %>
 
+  <%= render 'layouts/navbar' %>
 
-  <%= yield %>
+  <% if !user_signed_in? %>
+    <%= render 'layouts/intro_part' %>
+  <% end %>
+
+  <section class="body-content-section">
+    <center>
+      <%= yield %>
+    </center>
+  </section>
+
   </body>
 </html>

@@ -13,3 +13,184 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+@import url('https://fonts.cdnfonts.com/css/asmeralka');
+@import url('https://fonts.cdnfonts.com/css/source-serif-pro');
+
+body {
+    background-color: #f8f7f4;
+}
+
+.body-content-section {
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.navbar {
+    width: 100%;
+    height: 4em;
+    background-color: #f8f7f4;;
+    margin-bottom: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.left-navbar-side {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 28.5em;
+}
+
+.right-navbar-side {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 21.5em;
+    padding-right: 3em;
+}
+
+.mid-navbar-side {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar-element {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #0d0c22;
+    margin-right: 0.5em;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: color;
+}
+
+.navbar-element:hover {
+    transition-duration: 0.6s;
+    color: #4b4b52;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #0d0c22;
+    margin-right: 0.5em;
+    font-family: 'Asmeralka', sans-serif;
+    transition: color;
+}
+
+.navbar-logo:hover {
+    transition-duration: 0.6s;
+    color: #f8b2ee;
+}
+
+.navbar-search {
+    border: none;
+    border-radius: 4em;
+    padding: 20px;
+    margin-right: 2em;
+    background-color: #ffffff;
+    width: 20em;
+    height: 3.8em;
+    color: #0d0c22;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.navbar-search:focus {
+    outline: none;
+}
+
+.navbar-sing-in-btn {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bolder;
+    color: #0d0c22;
+    margin-right: 0.5em;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.navbar-register-btn {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-right: 0.5em;
+    background-color: #0d0c22;
+    border-radius: 3em;
+    padding: 18px 23px 18px 23px;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: background-color;
+}
+
+.navbar-register-btn:hover {
+    transition-duration: 0.6s;
+    background-color: #4b4b52;
+}
+
+/*INTRO PART SECTION*/
+
+.intro-section {
+    margin: 6em 0 4em 0;
+}
+
+.intro-phrase-div {
+    margin-bottom: 1em;
+}
+
+.new-shot-intro-btn {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: inherit;
+    color: #0d0c22;
+    background-color: #f8b2ee;
+    border-radius: 3em;
+    padding: 10px 23px 10px 23px;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: background-color;
+}
+
+.new-shot-intro-btn:hover {
+    transition-duration: 1s;
+    background-color: #ffda79;
+}
+
+.opening-div {
+    margin-bottom: 3em;
+    width: 50em;
+}
+
+.opening-phrase {
+    font-size: 4.5em;
+    font-weight: unset;
+    color: #0d0c22;
+    margin-bottom: -1px;
+    font-family: 'Source Serif Pro', sans-serif;
+}
+
+.opening-paragraph {
+    font-size: 1.1em;
+    color: #0d0c22;
+    font-family: 'Mona-Sans', sans-serif;
+}
+
+.get-started-div {
+    margin-bottom: 8em;
+}
+
+.get-started-btn {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-right: 0.5em;
+    background-color: #0d0c22;
+    border-radius: 3em;
+    padding: 23px 20px 23px 20px;
+    font-family: 'Mona-Sans', sans-serif;
+    transition: background-color;
+}
+
+.get-started-btn:hover {
+    transition-duration: 0.6s;
+    background-color: #4b4b52;
+}
