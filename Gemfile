@@ -25,6 +25,16 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Own Gems
+gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'carrierwave', '~> 3.0', '>= 3.0.5'
+gem 'simple_form', '~> 5.3'
+gem 'mini_magick', '~> 4.12'
+gem 'impressionist', '~> 2.0'
+gem 'jquery-rails', '~> 4.6'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'acts_as_votable', '~> 0.14.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -42,6 +52,12 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Own gems
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+  gem 'guard', '~> 2.18', '>= 2.18.1'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+
 end
 
 group :test do
