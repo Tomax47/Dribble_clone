@@ -1,6 +1,12 @@
 <h1>Editing Shot</h1>
 
+<div class="edit-shot-display-div">
+  <% unless @shot.user.blank? %>
+    <%= image_tag (@shot.user_shot_url), id: "previewImage" %>
+  <% end %>
+</div>
+
 <%= render 'form', shot: @shot %>
 
-<%= link_to 'Show', @shot %> |
-<%= link_to 'Back', shots_path %>
+<%= link_to 'Show', @shot, class: "shot-link" %> |
+<%= link_to 'Back', shots_path, class: "shot-link" %>

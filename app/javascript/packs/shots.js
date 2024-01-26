@@ -55,11 +55,11 @@ document.addEventListener("turbolinks:load", function() {
 
                 // DESIGN PART
                 dropZone.addEventListener('dragover', (e)=> {
-                    dropZone.classList.add('fire');
+                    dropZone.style.backgroundColor = "#ffe9fb"
                 }, false);
 
                 dropZone.addEventListener('dragleave', (e)=> {
-                    dropZone.classList.remove('fire');
+                    dropZone.style.backgroundColor = "transparent"
                 }, false);
 
                 dropZone.addEventListener('drop', (e)=> {

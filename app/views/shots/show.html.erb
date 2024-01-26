@@ -1,17 +1,32 @@
-<p>
-  <strong>Title:</strong>
-  <%= @shot.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @shot.description %>
-</p>
+<div class="show-shot-display-div">
+  <% unless @shot.user.blank? %>
+    <%= image_tag (@shot.user_shot_url), id: "previewImage" %>
+  <% end %>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @shot.user_id %>
-</p>
+<div class="shot-details">
+  <div class="shot-title-div">
+    <label class="form-label">Title</label>
+    <p>
+      <%= @shot.title %>
+    </p>
+  </div>
 
-<%= link_to 'Edit', edit_shot_path(@shot) %> |
-<%= link_to 'Back', shots_path %>
+  <div class="shot-description-div">
+    <label class="form-label">Description</label>
+    <p>
+      <%= @shot.description %>
+    </p>
+  </div>
+
+  <div class="shot-publisher">
+    <label class="form-label">User</label>
+    <p>
+      @<%= @shot.user.name %>
+    </p>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_shot_path(@shot), class: "shot-link"%> |
+<%= link_to 'Back', shots_path, class: "shot-link" %>
