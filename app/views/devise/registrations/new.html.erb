@@ -1,25 +1,99 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<section class="signup-div">
+  <div class="left-signup-part">
+    <div class="back-icon-div" id="back-icon-div">
+      <img id="back-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEUlEQVR4nO2ZvU4CQRSFCaKFpT8V8BgSfRCD0fcQwwOAvRg1lloYjRr/C3utJfoAKpWgNdh85sYx2RA3mdm9zK5xv2QTwsLsOcvsnTOXXC4jIyM2wBiwANSBY+AJ+AA+zSGvH805+cw8kE+D8DKwDnRw5xVoAqUkhM8CO8CA+AyALWDGl/hl4B19esDSKIWPA7uMnm25lrb4SeAaf1zJNTXvvE/xP9wCExoGfEybMLbiil8heapRxU8D3aTV813x3EusqfNpYTPKChtnkboDVoEzJQN9pxXbxIOoHACFwFhaJpouwayjId6MJ7+EBi9WAdCkSi3xBeAePSo2BuqK4uV9TdZsDJw4Dnr4i3iZhvvoc2RjQDYeabvzP7RtDNhG5dNh8VEASg5Zq2szoG39V9tJ8b3u2ND/FwbePU+hMnCjOYX+/EN84jjoUUgZ3UuqjNajDOzJRM3GgDSdohA2nSSZajFnYyBvmk5pC3PP1t080zHTitPnSgYaVuIDq6PGhuZccUNTtDZgTEi7Ly1sOIk3BqZSsqnvRe6bSq8yafXAYiTxARPSq0yKVizxgQVJco9vLjWyVrC5Kw1XX1yoNXeHmrw+KlNL7c6HGKmOqDq9xX5gHfumm2aBiUtf6ryUbS/ih4wUTeyQppMr8p2G8wo7IiMSACvStzHRum12dgNzyOsHc64mqTIVf7NmZOT+Pl9lnJrSctmfGQAAAABJRU5ErkJggg==">
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <div class="right-signup-part">
+    <div class="signup-container">
+      <h2 class="signup-phrase">Sign up to Dribbble</h2>
 
-<%= render "devise/shared/links" %>
+      <div class="google-signup-dev" id="google-sing-up-div">
+        <img class="google-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACFElEQVR4nGNgoCf4X6/F9qbEJPhtvmHDmyKD+nflxv7/6xlYSDboY6mB6utEo5PPnE3+PrU0/Y+Mn7mY/H2dYnTsQ7WxMlGGfagySnvmZoxhEAZ2Mfn7rtAgC79hJfrZz2xN8BsEc6mzyd9PpcYBOA17X6+v8NzD+A+yppdhxi/f5hoWvU0wkf1crCf2vtSw8FW48QuQYaDwxOu6H6v0pryONoYb9jrFaDcutZ/qjTXwGvb/PwPTrwO6z3/v1/3/qdUA7DIGSsDPA7q6vw/o/ofjrXpO6Gr8qmc/xoV9quY+qO2stYUr/n1A1xPZwP/7tXjQDRRNPfAfHy7tbqxBGLhfz4NSA0u6mqoRXt6vpwMz7NcB3f/n95hhJAd0b9qULvuCbGBNT1MAaqTs1332cb/+/9Ytrv9zN3m+IRTuLmUL38EMU83a+jd01SpmFAUXd5vPSNno/d9nfQAYN2113YfLsISm/sPIrotqmHwCQ9HcLc5KkRt8/8IMBOGCzZ6vJm13LO3e4ig/Z7u7+pQtjjX5mzzexU8t/S+Ztg/iuuytf6u7mrHn6ynbHfKCNvjBDcSHE+an/VfP2fyvqKs5F2/YTNnikBeF5lJsOHqDz9+p673wFw4wsGCbo3LzFtfjkRt8MAyO2uDzt3Wry9FZG10ViTIMGcw8Y8w6c6tTwKQtTvWTtznUzd5p51v/n4GJZIMoAQCvXrzatsacUQAAAABJRU5ErkJggg==">
+        <%= link_to "Sign in with google", "#{}", class: "google-sign-up-btn"%>
+      </div>
+
+      <div class="separator-phrase-div" id="separator-div">
+        <hr class="line-separator">
+        <p class="separator-phrase"> or </p>
+        <hr class="line-separator">
+      </div>
+
+      <div class="email-signup-dev">
+        <button class="email-sign-up-btn" id="sign-up-form-btn">Continue with email</button>
+      </div>
+
+      <div class="signup-form-div">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="sign-up-form-inputs" id="sign-up-from-inputs">
+
+            <div class="name-div">
+              <label class="form-label">Name</label>
+              <div class="name-input">
+                <%= f.input_field :name,
+                            required: true,
+                            label: false,
+                            class: "input-field" %>
+              </div>
+            </div>
+
+            <div class="email-div">
+              <label class="form-label">Username or Email</label>
+              <div class="email-input">
+                <%= f.email_field :email,
+                                  required: false,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "email" },
+                                  class: "input-field" %>
+              </div>
+            </div>
+
+            <div class="enter-password-div">
+              <label class="form-label">Password</label>
+              <div class="password-input">
+                <%= f.password_field :password,
+                                     required: false,
+                                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                     label: false,
+                                     input_html: { autocomplete: "new-password" },
+                                     class: "input-field"%>
+              </div>
+            </div>
+
+            <div class="confirm-password-div">
+              <label class="form-label">Confirm Password</label>
+              <div class="confirm-password-input">
+                <%= f.password_field :password,
+                                     required: false,
+                                     label: false,
+                                     input_html: { autocomplete: "new-password" },
+                                     class: "input-field"%>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="sign-up-form-actions" id="registration-btn-div">
+            <%= f.button :submit, "Create Account", class: "sign-up-btn" %>
+          </div>
+        <% end %>
+
+        <div class="agreement-phrase-div" id="agreement-phrase">
+          <p class="agreement-phrase">
+            By creating an account you agree with our
+            <span class="terms"><a class="terms-link" href="#"> Terms of Service</a></span>,
+            <span class="privacy"><a class="privacy-link" href="#"> Privacy Policy</a></span>, and our default
+            <span class="notification"><a class="notification-link" href="#"> Notification Settings</a></span>.
+          </p>
+        </div>
+        <%= render "devise/shared/links" %>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%= javascript_pack_tag 'devise' %>
